@@ -41,11 +41,9 @@ public class CommandWords
     /**
      * Print all valid commands to System.out.
      */
-    public void showAll() 
+    //Question 18 Lab 9
+    public String[] showAll() 
     {
-        for(String command: validCommands) {
-            System.out.print(command + "  ");
-        }
-        System.out.println();
+         return validCommands;
     }
 }

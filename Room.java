@@ -18,8 +18,9 @@ import java.util.HashMap;
 public class Room 
 {
     private String description;
-    private HashMap<String, Room> exits;        // stores exits of this room.
-
+    private HashMap<String, Room> exits; // stores exits of this room.
+    private HashMap<String, String> items; //Question 20 Lab 9
+    
     /**
      * Create a room described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
@@ -30,8 +31,15 @@ public class Room
     {
         this.description = description;
         exits = new HashMap<>();
+        items = new HashMap<>();
     }
 
+    //Question 22
+    public void addItem(String description, String weight)
+    {
+        items.put(description, weight);
+    }
+        
     /**
      * Define an exit from this room.
      * @param direction The direction of the exit.
