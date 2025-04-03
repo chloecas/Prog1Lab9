@@ -13,7 +13,9 @@
  * 
  * Lab 9 Questions
  * 21. I believe the collection should be created in the Room class but the
- * descriptions need to be initiliased and printed in the Game class.
+ * descriptions need to be initiliased and printed in the Game class. Upon 
+ * further reflection I decided to make a separate class for Items so other 
+ * classes can hold references to Item objects
  * 
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
@@ -60,12 +62,6 @@ public class Game
         lab.setExit("east", office);
 
         office.setExit("west", lab);
-        
-        // initialise items in each room, Question 22 Lab 9
-        theater.addItem("there is a microphone stand on the stage", "5lbs");
-        pub.addItem("there are empty pint glasses on the bar", "2lbs");
-        lab.addItem("the computers look bulky and old", "15lbs");
-        office.addItem("there is a comfy office chair", "10lbs");
         
         currentRoom = outside;  // start game outside
     }
