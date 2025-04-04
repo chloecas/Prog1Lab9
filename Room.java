@@ -19,7 +19,7 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits; // stores exits of this room.
-    private HashMap<String, Item> items; //Question 22 Lab 9
+    private HashMap<Room, String> items; //Question 22 Lab 9
     
     /**
      * Create a room described "description". Initially, it has
@@ -43,7 +43,12 @@ public class Room
     {
         exits.put(direction, neighbor);
     }
-
+    
+    public void setItem(Room currentRoom, String name)
+    {
+        items.put(currentRoom, name);//Question 22 Lab 9
+    }
+    
     /**
      * @return The short description of the room
      * (the one that was defined in the constructor).

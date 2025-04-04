@@ -25,6 +25,7 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
+    private Item item; // Question 22 Lab 9
         
     /**
      * Create the game and initialise its internal map.
@@ -61,11 +62,24 @@ public class Game
         lab.setExit("north", outside);
         lab.setExit("east", office);
 
-        office.setExit("west", lab);
+        office.setExit("west", lab); 
+        
+        //initiliase items Question 22 Lab 9
+        item = new Item("beautiful field of widlflowers", 2, "flowers");
+        item = new Item("tall microphone set on the stage", 5, "microphone");
+        item = new Item("bulky old computer on the desk", 10, "computer");
+        item= new Item("comfortable black chair", 5, "office chair");
+        
+        
+        //set items Question 22 Lab 9    
+        outside.setItem(outside, "flowers");
+        theater.setItem(theater, "microphone");
+        lab.setItem(lab, "computer");
+        office.setItem(office, "office chair");
         
         currentRoom = outside;  // start game outside
-    }
-
+    }  
+    
     /**
      *  Main play routine.  Loops until end of play.
      */

@@ -1,32 +1,31 @@
 
 /**
- * A collection of items that will be found in rooms
- * Question 22 Lab 9
+ * Write a description of class Item here.
  *
- * @author Chloe 
- * @version v1
+ * @author (your name)
+ * @version (a version number or a date)
  */
 public class Item
 {
     private String description;
     private int weight;
-    private String name; 
-
+    private String name;
+   
     /**
      * Constructor for objects of class Item
      */
     public Item(String description, int weight, String name)
     {
-        this.description = description;
-        this.weight= weight;
-        this.name = name;
+       this.description= description;
+       this.weight = weight;
+       this.name = name;
     }
-
+    
     /**
-     * 
+     *   
      */
-    public void getDescription()
+    public void getItemDescription()
     {
-        System.out.println("In this area" + this.description);
+        System.out.println("There is a" + this.description);
     }
 }
