@@ -24,8 +24,13 @@ public class Item
     /**
      *   
      */
-    public void getItemDescription()
+    public String getItemDescription()
     {
-        System.out.println("There is a" + this.description);
+        return "There is a " + this.description + "that weighs " + this.weight + " lbs.";
+    }
+    
+    public String getName()
+    {
+        return this.name;
     }
 }

@@ -64,18 +64,19 @@ public class Game
 
         office.setExit("west", lab); 
         
-        //initiliase items Question 22 Lab 9
-        item = new Item("beautiful field of widlflowers", 2, "flowers");
-        item = new Item("tall microphone set on the stage", 5, "microphone");
-        item = new Item("bulky old computer on the desk", 10, "computer");
-        item= new Item("comfortable black chair", 5, "office chair");
+        //Creating items Question 22 Lab 9
+        Item flowers = new Item("beautiful field of widlflowers", 2, "flowers");
+        Item  microphone = new Item("tall microphone set on the stage", 5, "microphone");
+        Item cup = new Item("empty pint glass", 1, "cup");
+        Item computer = new Item("bulky old computer on the desk", 10, "computer");
+        Item officeChair= new Item("comfortable black chair", 5, "office chair");
         
-        
-        //set items Question 22 Lab 9    
-        outside.setItem(outside, "flowers");
-        theater.setItem(theater, "microphone");
-        lab.setItem(lab, "computer");
-        office.setItem(office, "office chair");
+        //add items to rooms Question 22 Lab 9
+        outside.addItem(flowers);
+        theater.addItem(microphone);
+        pub.addItem(cup);
+        lab.addItem(computer);
+        office.addItem(officeChair);
         
         currentRoom = outside;  // start game outside
     }  
@@ -138,8 +139,6 @@ public class Game
         // else command not recognised.
         return wantToQuit;
     }
-
-    // implementations of user commands:
 
     /**
      * Print out some help information.
